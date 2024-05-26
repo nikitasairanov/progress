@@ -1,16 +1,13 @@
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #ffffff; /* или любой цвет фона для светлой темы */
-    color: #000000; /* или любой цвет текста для светлой темы */
-    /* Примените светлую тему ко всем элементам, которые изменяются в тёмной теме */
-  }
-}
 *,
 *::after,
 *::before{
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+}
+*::selection{
+    color: white;
+    background: black;
 }
 heml{
     overflow-x: hidden;
@@ -92,15 +89,103 @@ a{
 
 .main{
     width: 100vw;
-    height: 500px;
     display: flex;
     background-image: linear-gradient(rgba(16,86,192, 0.3), rgba(91,6,207, 0.3));
+    color: #333;
 }
-.main-inner{
+.main__inner{
     width: 90vw;
     height: 100%;
     margin: auto;
     background: white;
+}
+.main__title{
+        text-align: center;
+}
+.main__section-list{
+    padding: 0;
+    list-style: none;
+}
+.main__section-list li{
+    display: flex;
+    align-items: center;
+}
+.main__section-list li:nth-child(even){
+    direction: rtl;
+}
+.main__section-list li:nth-child(even) h3,
+.main__section-list li:nth-child(even) p{
+    text-align: start;
+}
+.main__section-list-img{
+    object-fit: cover;
+}
+@media(max-width: 1279px){
+    .main__inner{
+        padding: 5vw 3vw 15vw 3vw;
+    }
+    .main__title{
+        font-size: 6.5vw;
+    }
+    .main__section-title{
+        font-size: 5vw;
+    }
+    .main__section-text{
+        font-size: 3.8vw;
+    }
+}
+@media(min-width: 1280px){
+    .main__inner{
+        padding: 25px 50px 75px 50px;
+    }
+    .main__title{
+        margin-bottom: 75px;
+        font-size: 42px;
+    }
+    .main__section{
+        margin-bottom: 100px;
+    }
+    .main__section-title{
+        margin-bottom: 10px;
+        font-size: 36px;
+    }
+    .main__section-text{
+        max-width: 1000px;
+        font-size: 20px;
+    }
+    .main__section-list-img{
+            border-radius: 350px;
+    width: 300px;
+    height: 300px;
+    }
+    .main__section-list li{
+        margin: 0 108px;
+    }
+    .main__section-list-content{
+        width: 410px;
+    }
+    .main__section-list li:nth-child(odd) .main__section-list-content{
+        margin-left: 20px;
+        padding-left: 20px;
+        border-left: 1px black solid;
+    }
+    .main__section-list li:nth-child(even) .main__section-list-content{
+        margin-right: 20px;
+        padding-right: 20px;
+        border-right: 1px black solid;
+    }
+    .main__h3{
+        font-size: 30px;
+    }
+    
+    .our-services .main__section-title{
+        margin-bottom: 35px;
+        text-align: center;
+    }
+    .our-advantages .main__section-title{
+        margin-bottom: 35px;
+        text-align: center;
+    }
 }
 
 .footer{
@@ -110,6 +195,10 @@ a{
     align-items: center;
     background: #212121;
     color: white;
+}
+.footer *::selection{
+    color: #333;
+    background: white;
 }
 .footer__networks{
     display: flex;
