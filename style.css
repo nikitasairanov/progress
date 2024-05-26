@@ -1,0 +1,156 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+heml{
+    overflow-x: hidden;
+}
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+@font-face {
+	font-family: 'Myriad Pro'; 
+	src: local('Myriad Pro'),
+		url(Myriad-Pro.ttf); 
+}
+.header{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
+}
+.header__logo{
+    display: flex;
+    align-items: center;
+}
+
+.header__logo-svg{
+    width: 100%;
+}
+.header__logo-text{
+    margin-left: 0.2em;
+    font-family: "Myriad Pro", sans-serif;
+    line-height: 0.8em;
+}
+.header__logo-text span{
+    display: block;
+    font-family: "Myriad Pro", sans-serif;
+}
+.header__burger-btn{
+    background: none;
+    border: none;
+}
+.header__burger-icon{
+    width: 100%;
+}
+
+@media (min-width: 1280px){
+    .header__logo-icon{
+        width: 75px;
+    }
+    .header__logo-text{
+        font-size: 24px;
+    }
+    .header{
+        padding: 25px 5vw;
+    }
+    .header__burger-icon{
+        width: 75px;
+        height: 75px;
+    }
+}
+@media (max-width: 1279px){
+    .header__logo-icon{
+        width: 12vw;
+    }
+    .header__logo-text{
+        font-size: 5vw;
+    }
+    .header{
+        padding: 2vw;
+    }
+    .header__burger-btn{
+        width: 12vw;
+    }
+}
+
+.main{
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    background-image: linear-gradient(rgba(16,86,192, 0.3), rgba(91,6,207, 0.3));
+}
+.main-inner{
+    width: 90vw;
+    height: 100%;
+    margin: auto;
+    background: white;
+}
+
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #212121;
+    color: white;
+}
+.footer__networks{
+    display: flex;
+    flex-direction: column;
+}
+.footer__network:first-child{
+    margin: 0;
+}
+.footer__network-icon{
+    width: 100%;
+    fill: white;
+}
+.footer__contacts-wrapper{
+    text-align: end;
+}
+.footer__contacts{
+    display: block;
+}
+.footer__contact{
+    display: block;
+    font-style: normal;
+    color: white;
+}
+@media(max-width: 1279px){
+    .footer{
+        padding: 2vw;
+    }
+    .footer__network{
+        width: 7vw;
+        margin-top: 1vw;
+    }
+    .footer__contacts-title{
+        font-size: 4vw;
+    }
+    .footer__contact{
+        margin-top: 0.3em;
+        font-size: 2.5vw;
+    }
+}
+@media(min-width: 1280px){
+    .footer{
+        padding: 25px 5vw;
+    }
+    .footer__network{
+        width: 50px;
+        margin-top: 1vw;
+    }
+    .footer__contact{
+        margin-top: 5px;
+    }
+}
